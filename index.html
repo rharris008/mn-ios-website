@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" style="scroll-behavior:smooth">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -89,8 +89,8 @@ img{max-width:100%;display:block}
 .nav-hamburger span { display:block; width:24px; height:2px; background:var(--fg); margin:5px 0; transition:.2s; }
 
 /* ══ PAGES / LAYOUT ══════════════════════════════════════════════════════ */
-.page { display:none; }
-.page.active { display:block; }
+.page { scroll-margin-top: calc(var(--nav-h) + 24px); }
+
 .container { max-width:1200px; margin:0 auto; padding-inline:max(24px,env(safe-area-inset-left,0px)); }
 .section { padding:80px 0; }
 .section-alt { background:var(--grey-l); }
@@ -287,7 +287,7 @@ img{max-width:100%;display:block}
 <!-- ══════════════ SECTION: Header / Nav ══════════════ -->
 <header class="site-header">
   <div class="nav-inner">
-    <div class="logo-wrap" onclick="showPage('home')">
+    <div class="logo-wrap" onclick="smoothTo('sec-home')">
       <div>
         <div class="logo-text">M&amp;N IOS</div>
         <div class="logo-sub">Integrated Outsourced Services</div>
@@ -295,12 +295,12 @@ img{max-width:100%;display:block}
     </div>
     <nav>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#" onclick="showPage('home')" id="nav-home" class="active">Home</a></li>
-        <li><a href="#" onclick="showPage('about')" id="nav-about">About</a></li>
-        <li><a href="#" onclick="showPage('services')" id="nav-services">Services</a></li>
-        <li><a href="#" onclick="showPage('segments')" id="nav-segments">Sectors</a></li>
-        <li><a href="#" onclick="showPage('results')" id="nav-results">Results</a></li>
-        <li><a href="#" onclick="showPage('contact')" id="nav-contact" class="nav-cta">Talk to Us</a></li>
+        <li><a href="#sec-home" id="nav-home" class="active">Home</a></li>
+        <li><a href="#sec-about" id="nav-about">About</a></li>
+        <li><a href="#sec-services" id="nav-services">Services</a></li>
+        <li><a href="#sec-segments" id="nav-segments">Sectors</a></li>
+        <li><a href="#sec-results" id="nav-results">Results</a></li>
+        <li><a href="#sec-contact" id="nav-contact" class="nav-cta">Talk to Us</a></li>
       </ul>
     </nav>
     <button class="nav-hamburger" onclick="toggleNav()" aria-label="Menu">
@@ -310,7 +310,7 @@ img{max-width:100%;display:block}
 </header>
 
 <!-- ══════════════ SECTION: Home Page ══════════════ -->
-<div class="page active" id="page-home">
+<div class="page" id="sec-home">
 
   <section class="hero">
     <div class="container hero-inner">
@@ -318,8 +318,8 @@ img{max-width:100%;display:block}
       <h1>Your brand.<br><em>On the floor.</em><br>Working.</h1>
       <p class="hero-sub">M&amp;N IOS delivers visual merchandising, in-store training, and head office account management for appliance, electrical, and consumer electronics brands across Australia.</p>
       <div class="btn-row">
-        <button class="btn-primary" onclick="showPage('services')">Our Services</button>
-        <button class="btn-ghost" onclick="showPage('contact')">Talk to Us</button>
+        <button class="btn-primary" onclick="smoothTo('sec-services')">Our Services</button>
+        <button class="btn-ghost" onclick="smoothTo('sec-contact')">Talk to Us</button>
       </div>
       <div class="hero-stats">
         <div>
@@ -405,7 +405,7 @@ img{max-width:100%;display:block}
 </div>
 
 <!-- ══════════════ SECTION: About Page ══════════════ -->
-<div class="page" id="page-about">
+<div class="page" id="sec-about">
 
   <section class="section">
     <div class="container">
@@ -462,7 +462,7 @@ img{max-width:100%;display:block}
 </div>
 
 <!-- ══════════════ SECTION: Services Page ══════════════ -->
-<div class="page" id="page-services">
+<div class="page" id="sec-services">
 
   <section class="section">
     <div class="container">
@@ -540,7 +540,7 @@ img{max-width:100%;display:block}
 </div>
 
 <!-- ══════════════ SECTION: Sectors Page ══════════════ -->
-<div class="page" id="page-segments">
+<div class="page" id="sec-segments">
 
   <section class="section">
     <div class="container">
@@ -597,7 +597,7 @@ img{max-width:100%;display:block}
 </div>
 
 <!-- ══════════════ SECTION: Results Page ══════════════ -->
-<div class="page" id="page-results">
+<div class="page" id="sec-results">
 
   <section class="section">
     <div class="container">
@@ -693,7 +693,7 @@ img{max-width:100%;display:block}
 </div>
 
 <!-- ══════════════ SECTION: Contact Page ══════════════ -->
-<div class="page" id="page-contact">
+<div class="page" id="sec-contact">
 
   <section class="section">
     <div class="container">
@@ -769,9 +769,9 @@ img{max-width:100%;display:block}
       </div>
       <div>
         <div style="font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px;color:rgba(255,255,255,.8)">Services</div>
-        <div style="line-height:2;cursor:pointer" onclick="showPage('services')">Visual Merchandising</div>
-        <div style="line-height:2;cursor:pointer" onclick="showPage('services')">In-Store Training</div>
-        <div style="line-height:2;cursor:pointer" onclick="showPage('services')">Head Office Account Management</div>
+        <div style="line-height:2;cursor:pointer" onclick="smoothTo('sec-services')">Visual Merchandising</div>
+        <div style="line-height:2;cursor:pointer" onclick="smoothTo('sec-services')">In-Store Training</div>
+        <div style="line-height:2;cursor:pointer" onclick="smoothTo('sec-services')">Head Office Account Management</div>
       </div>
       <div>
         <div style="font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px;color:rgba(255,255,255,.8)">Sectors</div>
@@ -792,17 +792,10 @@ img{max-width:100%;display:block}
 const PAGES = ['home','about','services','segments','results','contact'];
 
 /* ════ NAVIGATION ════ */
-function showPage(id) {
-  PAGES.forEach(p => {
-    const el = document.getElementById('page-' + p);
-    const nav = document.getElementById('nav-' + p);
-    if (el) el.classList.toggle('active', p === id);
-    if (nav) nav.classList.toggle('active', p === id);
-  });
-  window.scrollTo({top: 0, behavior: 'smooth'});
-  // close mobile nav
+function smoothTo(id) {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({behavior:'smooth', block:'start'});
   document.getElementById('navLinks').style.display = '';
-  return false;
 }
 
 function toggleNav() {
@@ -817,15 +810,26 @@ function toggleNav() {
   }
 }
 
+/* ════ ACTIVE NAV OBSERVER ════ */
+const _observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.id.replace('sec-','');
+      PAGES.forEach(p => {
+        const nav = document.getElementById('nav-' + p);
+        if (nav) nav.classList.toggle('active', p === id);
+      });
+    }
+  });
+}, {rootMargin: '-20% 0px -70% 0px'});
+PAGES.forEach(p => { const el = document.getElementById('sec-' + p); if (el) _observer.observe(el); });
+
 /* ════ CONTACT FORM ════ */
 function handleContactSubmit(e) {
   e.preventDefault();
-  document.querySelector('#page-contact form').hidden = true;
+  document.querySelector('#sec-contact form').hidden = true;
   document.getElementById('form-thanks').hidden = false;
 }
-
-/* ════ INIT ════ */
-showPage('home');
 </script>
 </body>
 </html>
