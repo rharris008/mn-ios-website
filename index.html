@@ -105,7 +105,21 @@ img{max-width:100%;display:block}
 .section-heading { font-size:clamp(32px,5vw,52px); font-weight:700; color:var(--fg); }
 .section-dark .section-heading { color:var(--white); }
 .section-intro { font-size:18px; color:var(--grey-d); line-height:1.7; margin-top:16px; max-width:680px; }
-/* Grey-section intro text: --grey-d (#404040) is sufficiently dark for readability on --grey-l (#F4F4F4) */
+/* Grey-section text darkening — pure black in light mode; adapts in dark mode */
+.section-alt .section-heading { color:#000; }
+.section-alt .section-intro { color:#000; }
+.section-alt .proof-card h3,
+.section-alt .proof-card p,
+.section-alt .service-card h3,
+.section-alt .service-card p { color:#000; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .section-alt .section-heading { color:#eeeeee; }
+  :root:not([data-theme="light"]) .section-alt .section-intro { color:#eeeeee; }
+  :root:not([data-theme="light"]) .section-alt .proof-card h3,
+  :root:not([data-theme="light"]) .section-alt .proof-card p,
+  :root:not([data-theme="light"]) .section-alt .service-card h3,
+  :root:not([data-theme="light"]) .section-alt .service-card p { color:#eeeeee; }
+}
 
 /* ══ RED BAR ══════════════════════════════════════════════════════════════ */
 .red-bar { width:48px; height:4px; background:var(--red); margin:20px 0; }
@@ -349,7 +363,7 @@ img{max-width:100%;display:block}
   </section>
 
   <section style="padding:0;margin:0;line-height:0">
-    <img src="tanya-hero.png" alt="M&amp;N IOS field specialist with appliances" style="width:100%;display:block;max-height:560px;object-fit:cover;object-position:center top">
+    <img src="field-team-banner.webp" alt="M&amp;N IOS field team" style="width:100%;display:block;max-height:700px;object-fit:cover;object-position:center top">
   </section>
 
   <section class="section">
