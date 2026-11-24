@@ -105,6 +105,9 @@ img{max-width:100%;display:block}
 .section-heading { font-size:clamp(32px,5vw,52px); font-weight:700; color:var(--fg); }
 .section-dark .section-heading { color:var(--white); }
 .section-intro { font-size:18px; color:var(--grey-d); line-height:1.7; margin-top:16px; max-width:680px; }
+/* Grey-section text darkening — headings and intro text use near-black on --grey-l background */
+.section-alt .section-heading { color:var(--black); }
+.section-alt .section-intro { color:var(--black); }
 
 /* ══ RED BAR ══════════════════════════════════════════════════════════════ */
 .red-bar { width:48px; height:4px; background:var(--red); margin:20px 0; }
@@ -316,10 +319,6 @@ img{max-width:100%;display:block}
 <!-- ══════════════ SECTION: Home Page ══════════════ -->
 <div class="page" id="sec-home">
 
-  <section style="padding:0;margin:0;line-height:0">
-    <img src="field-team-banner.webp" alt="M&amp;N IOS field team" style="width:100%;display:block;max-height:700px;object-fit:cover;object-position:center top">
-  </section>
-
   <section class="hero">
     <div class="container hero-inner">
       <div class="hero-col-text">
@@ -351,6 +350,9 @@ img{max-width:100%;display:block}
     </div>
   </section>
 
+  <section style="padding:0;margin:0;line-height:0">
+    <img src="field-team-banner.webp" alt="M&amp;N IOS field team" style="width:100%;display:block;max-height:700px;object-fit:cover;object-position:center top">
+  </section>
 
   <section class="section">
     <div class="container">
@@ -471,7 +473,7 @@ img{max-width:100%;display:block}
           <p style="font-size:18px;color:rgba(255,255,255,.75);line-height:1.7;margin-top:16px">In today's market, a consumer electronics or appliance brand lives or dies at the shelf. We create immersive retail environments, equip store staff to advocate for your products, and manage the retailer relationships that determine your ranging and your space. That's how you build a brand tribe — not through advertising, but through every customer interaction on the floor.</p>
         </div>
         <div>
-          <img src="maral-banner.webp" alt="In-store with appliance lineup" style="width:100%;border-radius:8px;object-fit:cover;object-position:center">
+          <img src="tanya-hero.png" alt="Tanya Pacewicz" style="width:100%;border-radius:8px;object-fit:cover;object-position:center top;max-height:480px">
         </div>
       </div>
     </div>
